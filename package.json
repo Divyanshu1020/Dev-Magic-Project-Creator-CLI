@@ -16,7 +16,7 @@
     "cli",
     "boilerplate"
   ],
-  "author": "Your Name",
+  "author": "Divyanshu",
   "license": "ISC",
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
