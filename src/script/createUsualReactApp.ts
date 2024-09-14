@@ -148,11 +148,15 @@ function reactApp() {
   console.log("Creating a usual React App with React and TypeScript...");
 
   try {
-    // execSync("npm create vite@latest . -- --template react-ts", {
-    //   stdio: "inherit",
-    // });
-    // execSync("npm i", { stdio: "inherit" });
+    execSync("npm create vite@latest . -- --template react-ts", {
+      stdio: "inherit",
+    });
+    execSync("npm i", { stdio: "inherit" });
+
+    console.log("Creating some useful folders...");
     // fs.ensureDirSync("./src/components");
+    fs.ensureDirSync("./src/components/ui");
+    fs.ensureDirSync("./src/pages");
     installAlias();
     console.log("React App with TypeScript created successfully!");
   } catch (error) {
