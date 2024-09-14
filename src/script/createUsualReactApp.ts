@@ -8,20 +8,8 @@ import installRedux from "./installRedux";
 import installAxios from "./installAxios";
 
 export default async function createUsualReactApp() {
-  console.log("Creating a usual React App with React and TypeScript...");
-
-  try {
-    // execSync("npm create vite@latest . -- --template react-ts", {
-    //   stdio: "inherit",
-    // });
-    // execSync("npm i", { stdio: "inherit" });
-    // fs.ensureDirSync("./src/components");
-    installAlias();
-    console.log("React App with TypeScript created successfully!");
-    await askQuestions();
-  } catch (error) {
-    console.error("Error occurred while creating the React app:", error);
-  }
+  console.log("I will create a usual React App with React and TypeScript... But first I need some questions...");
+  await askQuestions();
 }
 
 const askQuestions = async (): Promise<void> => {
@@ -47,6 +35,8 @@ const askQuestions = async (): Promise<void> => {
       message: "Do you want to add Axios?",
     }
   ]);
+
+  reactApp();
 
   if (answers.tailwind)  installTailwind();
 
@@ -151,5 +141,21 @@ function updateTsConfigApp() {
     console.log("tsconfig.app.json updated successfully!");
   } catch (error) {
     console.error("Error updating tsconfig.app.json:", error);
+  }
+}
+
+function reactApp() {
+  console.log("Creating a usual React App with React and TypeScript...");
+
+  try {
+    // execSync("npm create vite@latest . -- --template react-ts", {
+    //   stdio: "inherit",
+    // });
+    // execSync("npm i", { stdio: "inherit" });
+    // fs.ensureDirSync("./src/components");
+    installAlias();
+    console.log("React App with TypeScript created successfully!");
+  } catch (error) {
+    console.error("Error occurred while creating the React app:", error);
   }
 }
