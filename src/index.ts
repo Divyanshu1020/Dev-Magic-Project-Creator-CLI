@@ -2,11 +2,15 @@
 
 import createUsualReactApp from "./script/createUsualReactApp";
 import { Command } from 'commander';
+import installTailwind from "./script/installTailwind";
+import installRedux from "./script/installRedux";
+import installRouter from "./script/installRouter";
+import installAxios from "./script/installAxios";
 
 const program = new Command();
 
 program
-  .version('1.0.0')
+  .version('0.1.0')
   .description('A CLI for creating and managing React applications');
 
 program
@@ -20,11 +24,21 @@ program
   .command('add <feature>')
   .description('Add a feature to your React application')
   .action((feature) => {
-    if (feature === 'axios') {
-      console.log('Installing Axios...');
-      // Add Axios installation logic here
-    } else {
-      console.log(`Unknown feature: ${feature}`);
+    switch (feature) {
+      case 'tailwind':
+        installTailwind();
+        break;
+      case 'redux':
+        installRedux();
+        break;
+      case 'router':
+        installRouter();
+        break;
+      case 'axios':
+        installAxios();
+        break;
+      default:
+        console.log(`Unknown feature: ${feature}`);
     }
   });
 
