@@ -1,32 +1,48 @@
 {
-  "name": "friday-cli",
-  "version": "0.1.0",
+  "name": "dev-magic",
+  "version": "2.0.0",
+  "description": "dev-magic is an arcane CLI spell that conjures the bones of your application—frontend and backend—ready to harness the powers of React and Node.js. With a single incantation, it weaves together optimal, scalable structures imbued with legendary features: Redux, Axios, Tailwind, Socket.IO, Redis, Kafka, Prisma, Swagger, and GraphQL. Perfect for developers seeking an enchanted kickstart.",
+  "main": "index.js",
   "bin": {
-    "friday": "./dist/index.js"
+    "dev-magic": "./dist/index.js"
   },
-  "description": "CLI tool for creating React applications with custom configurations",
-  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts"
   },
-  "keywords": [
-    "react",
-    "cli",
-    "boilerplate"
-  ],
   "author": "Divyanshu",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Divyanshu1020/Dev-Magic-Project-Creator-CLI"
+  },
+  "keywords": [
+    "fullstack",
+    "cli",
+    "react",
+    "node",
+    "typescript",
+    "npm-package"
+  ],
+  "bugs": {
+    "url": "https://github.com/Divyanshu1020/Dev-Magic-Project-Creator-CLI/issues"
+  },
+  "homepage": "https://github.com/Divyanshu1020/Dev-Magic-Project-Creator-CLI#readme",
   "devDependencies": {
+    "@types/figlet": "^1.5.8",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^22.5.4",
+    "@types/gradient-string": "^1.1.6",
+    "@types/node": "^22.7.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
     "commander": "^12.1.0",
+    "figlet": "^1.7.0",
     "fs-extra": "^11.2.0",
-    "inquirer": "^10.2.2"
+    "gradient-string": "^2.0.2",
+    "inquirer": "^11.0.2"
   }
 }
