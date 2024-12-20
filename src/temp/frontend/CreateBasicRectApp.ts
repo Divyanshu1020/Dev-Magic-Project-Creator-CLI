@@ -140,7 +140,7 @@ async function reactApp(isTypeScript: boolean) {
         } created successfully! \n`
       )
     );
-  } catch (error) {
+  } catch (error: any) {
     console.error(
       chalk.red(`❌ The react creation magic was interrupted.: ${error.message || error}`)
     );

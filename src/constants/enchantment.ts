@@ -3,7 +3,7 @@ export const spellEnchantment = {
     conjuring : (spell: string) => (`📁 Conjuring ${spell} structure...`),
     gathering : (spell: string) => (`📦 Gathering ${spell} dependencies...`),
     complete : (spell: string) => (`🎉 The ${spell} Summoning spell is complete! ✨`),
-    error : (spell: string, error: unknown) => (`❌ The ${spell} summoning ritual was interrupted.: ${error.message || error}`),
+    error : (spell: string, error: any) => (`❌ The ${spell} summoning ritual was interrupted.: ${error.message || error}`),
 }
 export const creationEnchantmen = {
 
